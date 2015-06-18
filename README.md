@@ -1,9 +1,6 @@
 ﻿# RadixSort
 Implementation of the radix sort algorithm presented in the MIT "Introduction to Algorithms" course.
 
-## Required Files
-Grab the countingSort.js file from https://github.com/ajon542/CountingSort 
-
 ## Example
 
 ```javascript
