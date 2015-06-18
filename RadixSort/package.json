@@ -1,0 +1,10 @@
+{
+  "name": "RadixSort",
+  "version": "0.0.0",
+  "description": "RadixSort",
+  "main": "app.js",
+  "author": {
+    "name": "ajones",
+    "email": ""
+  }
+}
