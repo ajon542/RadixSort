@@ -1,1 +1,3 @@
-﻿console.log('Hello world');
+﻿var radixSort = require('./radixSort.js');
+
+radixSort();

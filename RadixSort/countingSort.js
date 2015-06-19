@@ -6,7 +6,9 @@ module.exports = countingSort;
 // a: input array.
 // b: output sorted array.
 // k: temporary working storage size.
-function countingSort(a, b, k) {
+function countingSort(a, b, k, f) {
+    
+    var pos = f;
     
     // Initialise the temporary storage.
     var c = [];
@@ -16,7 +18,11 @@ function countingSort(a, b, k) {
     
     // Count each of the items in the input array.
     for (var j = 0; j < a.length; ++j) {
-        c[a[j]]++;
+        
+        var number = a[j];
+        var digit = ~~(number / Math.pow(10, pos)) - ~~(number / Math.pow(10, pos + 1)) * 10;
+
+        c[digit]++;
     }
     
     // Create a running count of the items.
@@ -35,7 +41,11 @@ function countingSort(a, b, k) {
     // from the rightmost side first, hence the algorithm is
     // stable.
     for (var j = a.length - 1; j >= 0; --j) {
-        b[c[a[j]]] = a[j];
-        c[a[j]]--;
+        
+        var number = a[j];
+        var digit = ~~(number / Math.pow(10, pos)) - ~~(number / Math.pow(10, pos + 1)) * 10;
+
+        b[c[digit] - 1] = a[j];
+        c[digit]--;
     }
 }
